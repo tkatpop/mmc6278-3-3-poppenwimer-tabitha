@@ -51,11 +51,13 @@ function runQuiz() {
 
     results = Math.round((correctAnswers/7) * 100)
 
+    
     if (correctAnswers === 7){
         alert ("Congrats you got 100% !")
     }
     else {
         alert ("Your score is " + results + "%")
     }
+
 }
 
