@@ -1,12 +1,13 @@
 var questionsArr = [
+
     {
-        question: 'Camels have three sets of eyelids.',
-        answer: true
+        question: 'Camels have three sets of eyes.',
+        answer: false
     },
 
     {
-        question: 'A group of monkeys is called a herd.',
-        answer: false
+        question: 'A group of monkeys is called a barrel.',
+        answer: true
     },
 
     {
@@ -20,8 +21,8 @@ var questionsArr = [
     },
 
     {
-        question: 'Sloths take two weeks to digest food.',
-        answer: true
+        question: 'Sloths take twelve weeks to digest food.',
+        answer: false
     },
 
     {
@@ -30,23 +31,28 @@ var questionsArr = [
     },
 
     {
-        question: 'Spiders have five legs.',
-        answer: false
-    },
-
-    {
-        question: 'The German shepherd is a breed of cat.',
-        answer: false
-    },
-
-    {
         question: 'Sea otters have favourite rocks that they use to crack open their food.',
         answer: true
-    },
-
-    {
-        question: 'A penguin is in the same scientific family as a lobster.',
-        answer: false
     }
 
+
 ]
+
+var trueAnswers = 0;
+
+function runQuiz() {
+
+    for (i = 0; i < questionsArr.length; i++) {
+        var answer = confirm(questionsArr[i].question)
+        if (questionsArr.answer = true){
+            confirm = trueAnswers++
+        }
+        if (questionsArr.answer = false){
+            confirm = trueAnswers--
+        }
+    }
+    
+    
+    
+}
+
