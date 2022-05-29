@@ -1,8 +1,8 @@
 var questionsArr = [
 
     {
-        question: 'Camels have three sets of eyes.',
-        answer: false
+        question: 'Camels have three sets of eyelids.',
+        answer: true
     },
 
     {
@@ -16,13 +16,13 @@ var questionsArr = [
     },
 
     {
-        question: 'Sharks are mammals.',
-        answer: false
+        question: 'Sharks are not mammals.',
+        answer: true
     },
 
     {
-        question: 'Sloths take twelve weeks to digest food.',
-        answer: false
+        question: 'Sloths take two weeks to digest food.',
+        answer: true
     },
 
     {
@@ -38,21 +38,24 @@ var questionsArr = [
 
 ]
 
-var trueAnswers = 0;
+var correctAnswers = 0;
 
 function runQuiz() {
 
     for (i = 0; i < questionsArr.length; i++) {
         var answer = confirm(questionsArr[i].question)
-        if (questionsArr.answer = true){
-            confirm = trueAnswers++
-        }
-        if (questionsArr.answer = false){
-            confirm = trueAnswers--
+        if (answer) {
+            correctAnswers++
         }
     }
-    
-    
-    
+
+    results = Math.round((correctAnswers/7) * 100)
+
+    if (correctAnswers === 7){
+        alert ("Congrats you got 100% !")
+    }
+    else {
+        alert ("Your score is " + results + "%")
+    }
 }
 
